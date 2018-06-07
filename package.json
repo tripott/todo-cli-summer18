@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/tripott/todo-cli-summer18/issues"
   },
-  "homepage": "https://github.com/tripott/todo-cli-summer18#readme"
+  "homepage": "https://github.com/tripott/todo-cli-summer18#readme",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
 }
