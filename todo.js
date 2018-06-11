@@ -1,4 +1,7 @@
 const { head } = require('ramda')
+const add = require('./cmd/add')
+
+//console.log('process.argv', process.argv)
 
 const [execNodePath, jsPath, cmd, ...everythingelse] = process.argv
 
@@ -14,7 +17,7 @@ function handleCmd(cmd) {
     case 'init':
       return 'you asked for the init cmd'
     case 'add':
-      return 'you asked for the add cmd'
+      return add(everythingelse)
     case 'rm':
       return 'you asked for the rm cmd'
     default:
