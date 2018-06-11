@@ -5,7 +5,7 @@
 Clone the repo and install project dependencies.
 
 ```
-git clone <clone url>
+git clone https://github.com/tripott/todo-cli-summer18.git
 cd todo-cli-summer18
 npm install
 ```
