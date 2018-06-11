@@ -21,7 +21,7 @@ function handleCmd(cmd) {
     case 'add':
       return add(everythingelse)
     case 'remove':
-      return remove()
+      return remove(everythingelse[0])
     case 'ls':
       return ls()
     default:
