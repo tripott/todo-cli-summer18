@@ -4,4 +4,11 @@
 // 3)
 //
 
-const fs = require('fs')
+const fs = require("fs")
+console.log(fs.existsSync("../todos.json"))
+
+function isJson() {
+  if (fs.existsSync("../todos.json")) {
+    return
+  }
+}
