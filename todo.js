@@ -1,5 +1,6 @@
 const { head } = require('ramda')
 const add = require('./cmd/add')
+const ls = require('./cmd/ls')
 
 //console.log('process.argv', process.argv)
 
@@ -20,6 +21,8 @@ function handleCmd(cmd) {
       return add(everythingelse)
     case 'rm':
       return 'you asked for the rm cmd'
+    case 'ls':
+      return ls()
     default:
       return `${cmd} is not supported`
   }
