@@ -6,6 +6,6 @@ Clone the repo and install project dependencies.
 
 ```
 git clone <clone url>
-cd <clone url>
+cd todo-cli-summer18
 npm install
 ```
