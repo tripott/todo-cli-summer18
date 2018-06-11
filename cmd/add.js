@@ -5,8 +5,9 @@
 // 3) add the object to the array of todos
 // 4) set() the array of todos to the todos.json file.
 
-const store = require('../lib/store.js')
+const store = require('../lib/store')
 const { join, append } = require('ramda')
+const ls = require('./ls')
 
 module.exports = function(arrWords) {
   const todos = store.get()
@@ -20,6 +21,7 @@ module.exports = function(arrWords) {
 
   // 4) set() the array of todos to the todos.json file.
   store.set(newArray)
+  return ls()
 
   function createTodo(arrWords, lastID) {
     //  { text: "feed the cat", completed: false, id: ???  + 1}
