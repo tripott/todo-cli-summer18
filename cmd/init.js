@@ -4,11 +4,15 @@
 // 3)
 //
 
-const fs = require("fs")
-console.log(fs.existsSync("../todos.json"))
+const fs = require("fs");
+//console.log(fs.existsSync("../todos.json"))
 
-function isJson() {
+function init() {
   if (fs.existsSync("../todos.json")) {
-    return
+    return "todos.json already exists and cannot be overwritten";
+  } else {
+    fs.writeFileSync("../todos.json", "[]");
   }
 }
+
+module.exports = init;
