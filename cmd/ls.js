@@ -1,13 +1,14 @@
 const store = require('../lib/store')
+const { pipe, map, join } = require('ramda')
 
 function ls() {
   /*
-    1) get() the todo list from the store
+    1) DONE ! get() the todo list from the store
     2) draw a header
-    3) map over the list and produce a list item for each object in the array 
+    3) map over the list and produce a list item for each object in the array
     4)    create a li function for the map.  take in an object and return a string list ite
     5) draw a footer
-    6)  return the result as a string from the function.  
+    6)  return the result as a string from the function.
 
     My To Do List
      ---------------------------------------
@@ -16,7 +17,21 @@ function ls() {
      [ ] - 3 eat dinner
      ---------------------------------------
   */
-  return 'tada!'
+  const todos = store.get()
+
+  const li = function(todo) {
+    return `[${todo.completed === true ? 'X' : ' '}] - ${todo.id} ${todo.text}`
+  }
+
+  const mappedListItems = pipe(map(li), join('\n  '))(todos)
+
+  const result = `
+  My To Do List
+  ---------------------------------------
+  ${mappedListItems}
+  ---------------------------------------
+  `
+  return result
 }
 
 module.exports = ls
