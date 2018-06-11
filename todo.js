@@ -1,6 +1,7 @@
 const { head } = require('ramda')
 const remove = require('./cmd/remove')
 const ls = require('./cmd/ls')
+const add = require('./cmd/add')
 
 //console.log('process.argv', process.argv)
 
