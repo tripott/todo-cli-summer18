@@ -3,6 +3,7 @@ const remove = require('./cmd/remove')
 const ls = require('./cmd/ls')
 const add = require('./cmd/add')
 const init = require('./cmd/init')
+const search = require('./cmd/search')
 
 //console.log('process.argv', process.argv)
 
@@ -23,6 +24,8 @@ function handleCmd(cmd) {
 			return add(everythingelse)
 		case 'remove':
 			return remove()
+		case 'search':
+			return search(everythingelse)
 		case 'ls':
 			return ls()
 		default:
