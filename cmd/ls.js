@@ -1,8 +1,8 @@
 const store = require('../lib/store')
-const { pipe, map, join } = require('ramda')
+const { pipe, map, join, reduce, compose, filter } = require('ramda')
 
 function ls() {
-  /*
+	/*
     1) DONE ! get() the todo list from the store
     2) draw a header
     3) map over the list and produce a list item for each object in the array
@@ -17,21 +17,38 @@ function ls() {
      [ ] - 3 eat dinner
      ---------------------------------------
   */
-  const todos = store.get()
+	const todos = store.get()
 
-  const li = function(todo) {
-    return `[${todo.completed === true ? 'X' : ' '}] - ${todo.id} ${todo.text}`
-  }
+	const li = function(todo) {
+		return `[${todo.completed === true ? 'X' : ' '}] - ${todo.id} ${todo.text}`
+	}
 
-  const mappedListItems = pipe(map(li), join('\n  '))(todos)
+	function percentCompleted(acc, value) {
+		return acc + value
+	}
 
-  const result = `
+	function isComplete(task) {
+		return task.completed === true
+	}
+
+	const newTodos = compose(
+		reduce(percentCompleted, 0),
+		filter(isComplete)
+	)(todos)
+
+	const mappedListItems = pipe(
+		map(li),
+		join('\n  ')
+	)(todos)
+
+	const result = `
   My To Do List
   ---------------------------------------
   ${mappedListItems}
   ---------------------------------------
+  ${(todos.length / newTodos.length) * 100}% complete
   `
-  return result
+	return result
 }
 
 module.exports = ls
