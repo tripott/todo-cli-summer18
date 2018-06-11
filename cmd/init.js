@@ -8,15 +8,15 @@ const fs = require('fs')
 //console.log(fs.existsSync("../todos.json"))
 
 function init(x) {
-  if (x === '--force') {
-    fs.writeFileSync('./todos.json', '[]')
-  } else {
-    if (fs.existsSync('./todos.json')) {
-      return 'todos.json already exists and cannot be overwritten'
-    } else {
-      fs.writeFileSync('./todos.json', '[]')
-    }
-  }
+	if (x[0] === '--force') {
+		fs.writeFileSync('./todos.json', '[]')
+	} else {
+		if (fs.existsSync('./todos.json')) {
+			return 'todos.json already exists and cannot be overwritten'
+		} else {
+			fs.writeFileSync('./todos.json', '[]')
+		}
+	}
 }
 
 module.exports = init
