@@ -2,7 +2,10 @@ const { head } = require('ramda')
 const remove = require('./cmd/remove')
 const ls = require('./cmd/ls')
 const add = require('./cmd/add')
+<<<<<<< HEAD
 const init = require('./cmd/init')
+=======
+>>>>>>> 325ad04b8263baa7153039b8852bf82480e6666b
 
 //console.log('process.argv', process.argv)
 
