@@ -1,6 +1,8 @@
 const { head } = require('ramda')
 const remove = require('./cmd/remove')
 const ls = require('./cmd/ls')
+const add = require('./cmd/add')
+const init = require('./cmd/init')
 
 //console.log('process.argv', process.argv)
 
@@ -16,7 +18,7 @@ function handleCmd(cmd) {
   // 'add', 'init', 'rm'
   switch (cmd) {
     case 'init':
-      return 'you asked for the init cmd'
+      return init(everythingelse)
     case 'add':
       return add(everythingelse)
     case 'remove':
