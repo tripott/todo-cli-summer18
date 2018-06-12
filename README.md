@@ -55,3 +55,40 @@ Overwriting the **todos.json** file with the `--force` option.
 ```
 todo into --force
 ```
+
+## `search`
+
+Search uses a keyword and filters out all todo items then displays all todo items that contain that keyword.
+
+**Examples**
+
+```
+todo search bitcoin
+```
+
+result : 
+
+```
+[X] buy bitcoin
+```
+
+## `ls`
+
+list todos gives you the ability to list all todo items within the todos.json. By running the ls command you can view all the items in your todo list.
+
+**Examples**
+
+```
+todo ls
+```
+
+result: 
+
+```
+ My To Do List
+  ---------------------------------------
+  [ ] - 1 cut grass
+  [ ] - 2 make dinner
+  [ ] - 3 eat dinner
+  ---------------------------------------
+```
