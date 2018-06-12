@@ -93,3 +93,4 @@ result:
   ---------------------------------------
   2 remaining  33% completed
 ```
+<img src='https://github.com/coinGuyBri/Learning-Git/blob/master/Jun%2012%202018%2010_52%20AM.gif?raw=true'>
