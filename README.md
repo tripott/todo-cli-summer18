@@ -58,7 +58,7 @@ todo into --force
 
 ## `search`
 
-Search uses a keyword and filters out all todo items then displays all todo items that contain that keyword.
+Search uses a keyword and filters out all todo items then displays all todo items that are relevant to the search.
 
 **Examples**
 
@@ -74,7 +74,7 @@ result :
 
 ## `ls`
 
-list todos gives you the ability to list all todo items within the todos.json. By running the ls command you can view all the items in your todo list.
+list todos gives you the ability to list all todo items within the todos.json. By running the ls command you can view all the items in your todo list.  Running the list allow you to see the number of tasks remaining and the percent completed.
 
 **Examples**
 
@@ -88,7 +88,9 @@ result:
  My To Do List
   ---------------------------------------
   [ ] - 1 cut grass
-  [ ] - 2 make dinner
+  [X] - 2 make dinner
   [ ] - 3 eat dinner
   ---------------------------------------
+  2 remaining  33% completed
 ```
+<img src='https://github.com/coinGuyBri/Learning-Git/blob/master/Jun%2012%202018%2010_52%20AM.gif?raw=true'>
