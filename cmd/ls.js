@@ -18,18 +18,22 @@ function ls() {
      ---------------------------------------
   */
   const todos = store.get()
-
+  const remaining = require('./remaining')
   const li = function(todo) {
     return `[${todo.completed === true ? 'X' : ' '}] - ${todo.id} ${todo.text}`
   }
 
-  const mappedListItems = pipe(map(li), join('\n  '))(todos)
+  const mappedListItems = pipe(
+    map(li),
+    join('\n  ')
+  )(todos)
 
   const result = `
   My To Do List
   ---------------------------------------
   ${mappedListItems}
   ---------------------------------------
+  remaining : ${remaining(todos)}
   `
   return result
 }

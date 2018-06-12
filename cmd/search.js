@@ -9,32 +9,32 @@ const store = require('../lib/store')
 const { pipe, map, join, filter } = require('ramda')
 
 function search(arrWord) {
-	const todos = store.get()
+  const todos = store.get()
 
-	const searchWord = arrWord[0]
+  const searchWord = arrWord[0]
 
-	const hasWord = object => {
-		return object['text'].includes(searchWord)
-	}
+  const hasWord = object => {
+    return object['text'].includes(searchWord)
+  }
 
-	const filteredTodos = filter(hasWord, todos)
+  const filteredTodos = filter(hasWord, todos)
 
-	const li = function(todo) {
-		return `[${todo.completed === true ? 'X' : ' '}] - ${todo.id} ${todo.text}`
-	}
+  const li = function(todo) {
+    return `[${todo.completed === true ? 'X' : ' '}] - ${todo.id} ${todo.text}`
+  }
 
-	const mappedListItems = pipe(
-		map(li),
-		join('\n  ')
-	)(filteredTodos)
+  const mappedListItems = pipe(
+    map(li),
+    join('\n  ')
+  )(filteredTodos)
 
-	const result = `
+  const result = `
   My To Do List
   ---------------------------------------
   ${mappedListItems}
   ---------------------------------------
   `
-	return result
+  return result
 }
 
 module.exports = search
