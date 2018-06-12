@@ -34,3 +34,38 @@ My To Do List
 ---------------------------------------
 remaining : 2
 ```
+
+## `add`
+
+Adds a todo to the **todos.json** file. The todo is automatically given a unique id, a description chosen by the user, and an incomplete status. Then it displays the updated todo list.
+
+**Examples**
+
+Given a starting todo list of:
+
+```
+My To Do List
+---------------------------------------
+[ ] - 1 win a car
+[ ] - 2 buy bitcoin
+---------------------------------------
+remaining : 2
+```
+
+You can add a todo with the description of `sell bitcoin` by typing the following into your terminal:
+
+```
+todo add sell bitcoin
+```
+
+This would result in the following updated todo list:
+
+```
+My To Do List
+---------------------------------------
+[ ] - 1 win a car
+[ ] - 2 buy bitcoin
+[ ] - 3 sell bitcoin
+---------------------------------------
+remaining : 3
+```
