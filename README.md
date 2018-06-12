@@ -37,3 +37,21 @@ npm install
 ```
 
 ## Commands 
+
+## `init`
+
+Prepare to add todo items by initializing a **todos.json** file.  If this is the first time running `todo init` within a project directory, a new  **todos.json** file containing an empty array.   If previous run `todo init` in the same directory, use the `--force` option to overwrite the existing file.  
+
+**Examples**
+
+Initializing a todo list for the first time. 
+
+```
+todo init
+```
+
+Overwriting the **todos.json** file with the `--force` option.
+
+```
+todo into --force
+```
