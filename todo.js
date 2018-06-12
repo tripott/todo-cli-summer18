@@ -3,6 +3,7 @@ const remove = require('./cmd/remove')
 const ls = require('./cmd/ls')
 const add = require('./cmd/add')
 const init = require('./cmd/init')
+
 const search = require('./cmd/search')
 const rm = require('./cmd/rm')
 
