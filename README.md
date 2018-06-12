@@ -55,3 +55,19 @@ Overwriting the **todos.json** file with the `--force` option.
 ```
 todo into --force
 ```
+
+## `search`
+
+Search uses a keyword and filters out all todo items then displays all todo items that contain that keyword.
+
+**Examples**
+
+```
+todo search bitcoin
+```
+
+result : 
+
+```
+[X] buy bitcoin
+```
