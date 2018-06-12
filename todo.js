@@ -5,6 +5,7 @@ const add = require('./cmd/add')
 const init = require('./cmd/init')
 const search = require('./cmd/search')
 const rm = require('./cmd/rm')
+const check = require('./cmd/check')
 
 //console.log('process.argv', process.argv)
 
@@ -29,6 +30,8 @@ function handleCmd(cmd) {
       return search(everythingelse)
     case 'ls':
       return ls()
+    case 'check':
+      return check(everythingelse)
     default:
       return `${cmd} is not supported`
   }
