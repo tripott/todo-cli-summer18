@@ -58,7 +58,7 @@ todo into --force
 
 ## `search`
 
-Search uses a keyword and filters out all todo items then displays all todo items that contain that keyword.
+Search uses a keyword and filters out all todo items then displays all todo items that are relevant to the search.
 
 **Examples**
 
